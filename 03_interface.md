@@ -15,7 +15,8 @@ If an add-on appears in more than one place in Blender’s interface or introduc
 The **sidebar** should only be used if a control panel-like interface is needed, e.g. grouping several otherwise scattered functions together for ease of use, or if an operator fits nicely in an existing sidebar category (e.g. View or Item).
 
 > For example, the following add-on (which is extremely cool and fun) does not need a sidebar panel when it could be a single operator in the existing Add menu. The path option should be set in the preferences while the follow and scale options could be adjusted via the redo panel, saving the user from having yet another tab in the sidebar. 
->![Add Mario sidebar panel](/images/interface_sidebar_mario.jpg)
+
+![Add Mario sidebar panel](/images/interface_sidebar_mario.jpg)
 
 **Single operators** belong in the header menus of whichever editor they are used in. They should not appear in editors or modes that they cannot be used in. If there are several related operators in a menu and it gets too full, place them in a new sub-menu instead. 
 
