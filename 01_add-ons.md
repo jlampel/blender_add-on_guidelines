@@ -1,9 +1,3 @@
----
-excerpt: Documentation for the Voronoi Scatter function of the Scattershot add-on for Blender.
-nav_exclude: false
-search_exclude: false
----
-
 # Add-ons
 
 Add-ons should have a specific focus on a workflow or set of related tasks. If a good high level summary of one cannot fit into a sentence, it should probably be split into multiple add-ons that can be bundled together. 
