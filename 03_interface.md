@@ -1,6 +1,10 @@
 # User Interfaces
 
-The ideal add-on is both completely unobtrusive when not in use and easily accessible when needed. Since users are able to add operators to their quick favorites, it is better to append or prepend functions to Blender’s existing menus or panels rather than add a new hotkey that could potentially conflict with the user's custom preferences or with other add-ons. How easy a function is to get to should reflect, realistically, how often the add-on is needed in a typical workflow. New menus, popovers, panels, etc. should only be created when absolutely necessary. 
+The ideal add-on is both completely unobtrusive when not in use and easily accessible when needed. Since users are able to add operators to their quick favorites, it is better to append or prepend functions to Blender’s existing menus or panels rather than add a new hotkey that could potentially conflict with the user's custom preferences or with other add-ons. How easy a function is to get to should reflect, realistically, how often the add-on is needed in a typical workflow. 
+
+## Placement and Layout 
+
+New menus, popovers, panels, etc. should only be created when absolutely necessary. 
 
 Any new **header menus** and **tabs** should be named generically (e.g. “Modeling” rather than “RetopoFlow”) unless there are so many contents that they need to take up a significant amount of space even when organized into sub-menus or collapsed. That way, they can share the space peacefully with other add-ons and not overcrowd important parts of Blender's interface. 
 
