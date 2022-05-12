@@ -6,13 +6,13 @@ Any new **top level menus** and **tabs** should be named generically (e.g. “Mo
 
 If an add-on appears in more than one place in Blender’s interface or introduces new top level buttons, menus, tabs, or panels, each new element should be customizable via the add-on’s preferences. Elements (e.g. a button in an editor’s header or a sidebar tab) should be able to be turned off and top level tabs or menus should be able to be renamed so that the user can organize their add-ons as they'd like. 
 
-[Avoid overcrowding the sidebar or headers](/images/interface_sidebar-crowding.png)
+![Avoid overcrowding the sidebar or headers](/images/interface_sidebar-crowding.png)
 
 The **sidebar** should only be used if a control panel-like interface is needed, e.g. grouping several otherwise scattered functions together for ease of use, or if an operator fits nicely in an existing sidebar category (e.g. View or Item).
 
 For example, the following add-on (which is extremely cool and fun) does not need a sidebar panel when it could be a single operator in the existing Add menu. The path option should be set in the preferences while the follow and scale options could be adjusted via the redo panel, saving the user from having yet another tab in the sidebar. 
 
-[Add Mario sidebar panel](/images/interface_sidebar_mario.jpg)
+![Add Mario sidebar panel](/images/interface_sidebar_mario.jpg)
 
 **Single operators** belong in the header menus of whichever editor they are used in. They should not appear in editors or modes that they cannot be used in. If there are several related operators in a menu and it gets too full, place them in a new sub-menu instead. 
 
