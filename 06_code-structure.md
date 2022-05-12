@@ -1,0 +1,11 @@
+# Code Structure 
+
+## Files 
+
+All add-ons should use the multi-file structure instead of being a single python file, even if it is incredibly simple, so that it can work with add-on updaters and the Blender development plugin for Visual Studio Code.
+
+## External Modules
+
+Some add-ons may require external modules in order to function, which may introduce dependency issues when not managed correctly. If at all possible, it’s best to bundle any necessary modules with the add-on so that there are fewer things that could go wrong during the installation process. 
+
+If the module can’t be distributed with the add-on, for example if it would break copyright to do so, the add-on should detect whether or not the correct version of the modules are installed, provide a link to where the user can install or update the module, and have a customizable path for where the add-on looks for the module so that the user can install it in any directory they choose. Rather than return an error, the add-on should require the correct version of the module before registering the operators that depend on it. The add-on should also check the installation of the module every time it’s registered and return a warning if it detects a potential conflict. 

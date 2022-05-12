@@ -1,0 +1,3 @@
+# Licensing
+
+All Python scripts written for Blender must be open source and compatible with the GPL license. Assets made for or with Blender that are not code, however, do not necessarily need to be open source. This could include custom icons, images, models, scenes, or node groups. Any code that cannot be open source must be created as a separately run program and communicated with via an add-on that acts only as a bridge between the outside program and Blender’s API. The license or licenses should be clearly stated in a text document at the top level of the add-ons folder and be communicated to users before they purchase or download the files. 
