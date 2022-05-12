@@ -8,4 +8,4 @@ The name of an add-on should reflect what it does but does not need to be overly
 
 ## Installation
 
-It should be assumed that the add-on will be installed as a .zip file via Blender's preferences, and the user should not have to go to Blender's add-on folder to manually edit or move any files. 
+It should be assumed that the add-on will be installed as a .zip file via Blender's preferences, and that the user should not have to go to Blender's add-on folder to manually edit or move any files. 
