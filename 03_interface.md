@@ -2,7 +2,7 @@
 
 The ideal add-on is both completely unobtrusive when not in use and easily accessible when needed. Since users are able to add operators to their quick favorites, it is better to append or prepend functions to Blender’s existing menus or panels rather than add a new hotkey that could potentially conflict with the user's custom preferences or with other add-ons. How easy a function is to get to should reflect, realistically, how often the add-on is needed in a typical workflow. 
 
-## Placement and Layout 
+## Placement
 
 New menus, popovers, panels, etc. should only be created when absolutely necessary. 
 
@@ -22,3 +22,10 @@ The **sidebar** should only be used if a control panel-like interface is needed,
 
 The **right click context menu** is for making common actions easier to get to. Your operators should not exclusively exist in this menu and the user should have the choice to remove them if desired. 
 
+## Layout 
+
+In general, add-ons should look and behave as if they were built-in features. Native UI components and patterns should always be the default. In some cases, however, Blender’s interface may be too limiting. Overstepping those may be exactly what allows the user to work faster or in a more intuitive way. Custom interfaces should be used sparingly and should mimic Blender’s style so that users can immediately feel comfortable using it. Any custom fonts or icons that deviate from Blender’s style should be consistent throughout the addon and should not appear directly next to or mixed in with the native components. 
+
+## Hotkeys 
+
+Registering new global hotkeys (hotkeys that work regardless of which tool is active) should be avoided when possible, and any new hotkeys should be able to be easily disabled or remapped via the add-on’s preferences. 
