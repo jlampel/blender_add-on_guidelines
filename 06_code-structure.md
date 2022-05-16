@@ -4,6 +4,10 @@
 
 All add-ons should use the multi-file structure instead of being a single python file, even if it is incredibly simple, so that it can work with add-on updaters and the Blender development plugin for Visual Studio Code.
 
+Folder and file names should not contain spaces or any special characters except for underscores. Python does not work well or at all when the module / file names contain spaces, dashes, or periods. Blender is able to get around this, but it will still cause complications. The only safe non-alphanumeric character is the underscore.
+
+Use forward slashes (/) when referencing files paths rather than backslashes (\), since the first will work on both Windows and Linux while the latter will not work on Linux and sometimes need to be doubled (\\) on Windows to avoid accidentally creating a character code (such as \n). 
+
 ## External Modules
 
 Some add-ons may require external modules in order to function, which may introduce dependency issues when not managed correctly. If at all possible, it’s best to bundle any necessary modules with the add-on so that there are fewer things that could go wrong during the installation process. 
