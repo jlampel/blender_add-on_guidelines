@@ -6,7 +6,7 @@ All add-ons should use the multi-file structure instead of being a single python
 
 Folder and file names should not contain spaces or any special characters except for underscores. Python does not work well or at all when the module / file names contain spaces, dashes, or periods. Blender is able to get around this, but it will still cause complications. The only safe non-alphanumeric character is the underscore.
 
-Use forward slashes (/) when referencing files paths rather than backslashes (\), since the first will work on both Windows and Linux while the latter will not work on Linux and sometimes need to be doubled (\\) on Windows to avoid accidentally creating a character code (such as \n). 
+Use forward slashes ('/') when referencing files paths rather than backslashes ('\'), since the first will work on both Windows and Linux while the latter will not work on Linux and sometimes need to be doubled ('\\') on Windows to avoid accidentally creating a character code (such as '\n'). 
 
 ## External Modules
 
