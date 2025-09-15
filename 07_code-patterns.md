@@ -9,28 +9,24 @@ search_exclude: false
 
 ## BMesh
 
-When altering meshes, it is important to work with BMesh carefully. Mistakes can cause errors that are difficult to debug and can even break other add-ons the user may have enabled.
-
-1. Rules for Memory Ownership
+When altering meshes, it is important to work with BMesh carefully. Mistakes in memory ownership and reference management can cause errors that are difficult to debug and can even break other add-ons the user may have enabled. Here are some important rules to follow:
 
 - Edit Mesh BMesh is owned by Blender and obtained via `bmesh.frem_edit_mesh()`
     - DO use the reference temporarily
-    - DO NOT call `.free()` on it
+
+    - DO get fresh references when needed instead of storing stale ones
     - DO NOT store long term references of it
+
+    - DO clear references via Python's garbage collector (`bm = None`)
+    - DO NOT call `.free()` on it
+
+    - DO use BMesh objects locally within functions (`bm = bmesh.from_edit_mesh()`)
+    - DO NOT use BMesh objects as instance variables (`self.bm = bmesh.from_edit_mesh()`)
 
 - New BMesh is owned by you, fellow add-on developer, and is created via `bmesh.new()`
     - DO call `.free()` when finished with it
     - DO manage its lifecycle
 
-2. Reference Management for Edit Mesh BMesh
-
-- Get fresh BMesh references when needed instead of storing stale ones
-- Clear references via Python's garbage collector (`bm = None`) instead of calling `.free()`
-- Use BMesh objects locally within functions rather than as instance variables
-    DO `bm = bmesh.from_edit_mesh()`
-    DO NOT `self.bm = bmesh.from_edit_mesh()`
-
-3. Index Table Management for Edit Mesh BMesh
 
 Remember, in Edit Mesh BMesh, you are NOT the owner nor have full control over it! Always call `ensure_lookup_table()` before accessing elements by index or handle IndexError gracefully and refresh tables as needed.
 
